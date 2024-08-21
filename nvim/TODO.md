@@ -3,3 +3,9 @@
 - [X] Install toggleterm
 - [ ] Set neotree and telescope to default open a file in a new tab rather than refilling the current buffer
 - [ ] Create shorthand commands for creating new tabs
+- [X] Install mason
+- [ ] Install additions to mason to handle linting and formatting
+- [ ] Configure toggleterm to better suit my needs or transfer to tmux this includes creating mappings for oppening it
+- [ ] Create a mapping to close telescope when opened and I do not want to select a file to switch to
+- [ ] Research nvim-cmp. Appears to be suggestion completions.
+- [ ] Create a functional mapping to match the clipboard to nvim

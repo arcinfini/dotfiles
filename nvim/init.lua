@@ -1,6 +1,3 @@
--- Plugins to research
--- https://github.com/akinsho/toggleterm.nvim
---
 
 vim.g.have_nerd_font = true
 
@@ -25,3 +22,4 @@ require('lazy').setup('plugins')
 
 require('config.mappings')
 require('config.theme')
+require('config.lsp')
