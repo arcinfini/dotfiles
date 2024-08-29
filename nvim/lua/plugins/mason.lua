@@ -3,8 +3,8 @@
 -- Setup and more is handled in lsp.lua
 
 return {
-    { 
-        'williamboman/mason.nvim', 
+    {
+        'williamboman/mason.nvim',
         dependencies = {
             { 'williamboman/mason-lspconfig.nvim' },
             { 'neovim/nvim-lspconfig' }

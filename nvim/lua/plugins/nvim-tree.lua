@@ -1,7 +1,7 @@
 
 return {
-    { 
-        "nvim-tree/nvim-tree.lua", 
+    {
+        "nvim-tree/nvim-tree.lua",
         dependencies = {
             "nvim-tree/nvim-web-devicons"
         },
@@ -9,11 +9,11 @@ return {
            local api = require 'nvim-tree.api'
 
             local function opts(desc)
-                return { 
-                    desc = 'nvim-tree: '.. desc, 
-                    noremap = true, 
-                    silent = true, 
-                    nowait = true 
+                return {
+                    desc = 'nvim-tree: '.. desc,
+                    noremap = true,
+                    silent = true,
+                    nowait = true
                 }
             end
 
@@ -24,9 +24,8 @@ return {
 
 
         end,
-        opts={ 
-            filters = {dotfiles = true},
+        opts={
             hijack_cursor = true
-        } 
+        }
     }
 }
