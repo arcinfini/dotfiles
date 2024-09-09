@@ -15,8 +15,9 @@ require('mason-lspconfig').setup {
 -- For lsp specific documentation go to
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local lspc = require('lspconfig')
 
--- lspc.lua_ls.setup {}
-lspc.pylsp.setup {}
+lspc.lua_ls.setup { capabilities = capabilities }
+lspc.pylsp.setup { capabilities = capabilities }
 
