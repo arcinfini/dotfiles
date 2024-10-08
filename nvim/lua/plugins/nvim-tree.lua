@@ -25,7 +25,18 @@ return {
 
         end,
         opts={
-            hijack_cursor = true
+            hijack_cursor = true,
+            renderer = {
+                icons = {
+                    show = {
+                        file = true,
+                        folder = true,
+                        folder_arrow = true,
+                        git = true
+                    }
+                }
+            },
+            filters = { git_ignored = false, custom = {'__pycache__'} }
         }
     }
 }
