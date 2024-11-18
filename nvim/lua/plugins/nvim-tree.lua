@@ -36,7 +36,7 @@ return {
                     }
                 }
             },
-            filters = { git_ignored = false, custom = {'__pycache__'} }
+            filters = { git_ignored = false, custom = {'__pycache__', '.ruff_cache', '.mypy_cache', '.venv', '.git'} }
         }
     }
 }
