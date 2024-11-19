@@ -1,13 +1,10 @@
 
-- [_] Install Hack Nerd Font and set active. Ensure nvim-tree icons are functioning correctly
-- [X] Install toggleterm
-- [_] Set neotree and telescope to default open a file in a new tab rather than refilling the current buffer
-- [ ] Create shorthand commands for creating new tabs
-- [X] Install mason
-- [ ] Install additions to mason to handle linting and formatting
-- [X] Configure toggleterm to better suit my needs or transfer to tmux this includes creating mappings for oppening it
-- [_] Create a mapping to close telescope when opened and I do not want to select a file to switch to
-- [X] Research nvim-cmp. Appears to be suggestion completions.
-- [ ] Create a functional mapping to match the clipboard to nvim
+- [ ] Comb through plugins and consoldate content. The following are ordered in what I think will be easiest to hardest
+    - [ ] lazydev
+    - [ ] mason
+    - [ ] treesitter
+    - [ ] toggleterm
+    - [ ] telescope
+    - [ ] nvim-tree
+    - [ ] cmp
 - [ ] nvim-cmp these mappings would be better, tab -> autocomplete esc -> ignore autocomplete. this is what is mapped like in vscode
-- [X] Change the ignore files for nvim-tree and telescsope. it is currently set to ignore .gitignore files but this hides some important files
