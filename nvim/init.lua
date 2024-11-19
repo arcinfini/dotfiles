@@ -22,4 +22,3 @@ require('lazy').setup('plugins')
 
 require('config.mappings')
 require('config.theme')
-require('config.lsp')
