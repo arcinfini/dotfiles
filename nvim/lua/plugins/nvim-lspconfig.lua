@@ -10,7 +10,7 @@ return {
     },
 
     opts = {
-        servers = {lua_ls={}, rust_analyzer={}, pylsp={}, ruff={}}
+        servers = {lua_ls={}, rust_analyzer={}, pylsp={}, ruff={ init_options = { settings = { configuratioPreference = 'filesystemFirst' } } }}
     },
 
     config = function (_, opts)

@@ -9,6 +9,7 @@ return {
             -- setup mappings
             require('config.mappings').nvimtree()
         end,
+
         opts={
             hijack_cursor = true,
             renderer = {
@@ -21,7 +22,7 @@ return {
                     }
                 }
             },
-            filters = { git_ignored = false, custom = {'__pycache__', '.ruff_cache', '.mypy_cache', '.venv', '.git'} }
+            filters = { git_ignored = false, custom = {'__pycache__', '.ruff_cache', '.mypy_cache', '.venv/', '.git'} }
         }
     }
 }
