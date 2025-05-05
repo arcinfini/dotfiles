@@ -9,7 +9,7 @@ return {
                 highlight = { enable = true },
                 indentation = { enable = true },
                 sync_install = false,
-                auto_install = false,
+                auto_install = true,
                 ignore_install = {}
             })
         end
