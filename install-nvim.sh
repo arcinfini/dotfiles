@@ -13,8 +13,9 @@
 
 (
 cd "$(mktemp -d)"
-git clone https://github.com/neovim/neovim.git
-cd neovim
+curl -LO https://github.com/neovim/neovim/archive/refs/tags/v0.11.2.tar.gz
+tar xzvf v0.11.2.tar.gz
+cd neovim-0.11.2
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 )

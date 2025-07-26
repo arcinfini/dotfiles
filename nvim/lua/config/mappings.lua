@@ -29,8 +29,8 @@ local mappings = {}
 mappings.telescope = function ()
     local builtin = require('telescope.builtin')
 
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+    map('n', '<leader>ff', builtin.find_files, {})
+    map('n', '<leader>fg', builtin.live_grep, {})
 end
 
 mappings.nvimtree = function ()
@@ -45,10 +45,10 @@ mappings.nvimtree = function ()
         }
     end
 
-    vim.keymap.set('n', '<leader>tt', api.tree.open, opts('[T]oggle Open / Focus Tree'))
-    vim.keymap.set('n', '<leader>tq', api.tree.close, opts('[Q]uit the Tree'))
-    vim.keymap.set('n', '<leader>tr', api.tree.reload, opts('[R]eload the Tree'))
-    vim.keymap.set('n', '<leader>tc', function() api.tree.collapse_all(true) end, opts('[C]ollapse the Tree'))
+    map('n', '<leader>tt', api.tree.open, opts('[T]oggle Open / Focus Tree'))
+    map('n', '<leader>tq', api.tree.close, opts('[Q]uit the Tree'))
+    map('n', '<leader>tr', api.tree.reload, opts('[R]eload the Tree'))
+    map('n', '<leader>tc', function() api.tree.collapse_all(true) end, opts('[C]ollapse the Tree'))
 end
 
 return mappings
