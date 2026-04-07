@@ -1,28 +1,27 @@
+--[[
+--
+-- https://github.com/nvim-tree/nvim-tree.lua
+--
+-- The little file structure that appears on the left.
+--
+--]]
 
 return {
-    {
-        "nvim-tree/nvim-tree.lua",
-        dependencies = {
-            "nvim-tree/nvim-web-devicons"
-        },
-        init = function()
-            -- setup mappings
-            require('config.mappings').nvimtree()
-        end,
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    },
+    opts={},
+    init = function()
+        local api = require('nvim-tree.api')
+        local map = vim.keymap.set
 
-        opts={
-            hijack_cursor = true,
-            renderer = {
-                icons = {
-                    show = {
-                        file = true,
-                        folder = true,
-                        folder_arrow = true,
-                        git = true
-                    }
-                }
-            },
-            filters = { git_ignored = false, custom = {'__pycache__', '.ruff_cache', '.mypy_cache', '.venv/', '.git'} }
-        }
-    }
+        local function opts(desc) end
+
+        map('n', '<leader>tt', api.tree.open, opts('[T]oggle Open / Focus Tree'))
+        map('n', '<leader>tq', api.tree.close, opts('[Q]uit the Tree'))
+        map('n', '<leader>tr', api.tree.reload, opts('[R]eload the Tree'))
+    end
 }

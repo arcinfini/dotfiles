@@ -13,12 +13,16 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4 -- this is the one that finally made tabs 4 spaces
 vim.opt.linebreak = true
 
-
 vim.opt.number = true
 vim.opt.scrolloff = 10
 
 require('config.lazy')
-require('lazy').setup('plugins')
+require('lazy').setup({
+    spec={
+        { import = 'plugins' }, 
+        { import = 'plugins.lsp'}
+    }
+})
 
 require('config.mappings')
 require('config.theme')

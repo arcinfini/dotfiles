@@ -1,21 +1,21 @@
--- Create keybind for gitblame
--- Create keybind to toggle signs
--- Create keybinds for navigating hunks (I think this is what they are called)
+--[[
+--
+-- https://github.com/lewis6991/gitsigns.nvim
+--
+-- Neovim git navigation. 
+--
+-- While I mainly use this for showing changes, it has powerful tools for
+-- navigation and the like in terms of git.
+--
+--]]
 
 return {
-    { 'lewis6991/gitsigns.nvim', opts = {
-        on_attach = function(bufnr)
-            local gs = require('gitsigns')
-
-            local function map(mode, l, r, opts)
-                opts = opts or {}
-                opts.buffer = bufnr
-                vim.keymap.set(mode, l, r, opts)
-            end
-
-            map('n', '<leader>gb', gs.toggle_current_line_blame)
-
-        end
-
-    }}
+    'lewis6991/gitsigns.nvim',
+    init = function()
+        local api = require('gitsigns')
+        local map = vim.keymap.set
+        
+        map('n', '<leader>gb', api.blame, {})
+        map('n', '<leader>gp', api.preview_hunk, {})
+    end,
 }
