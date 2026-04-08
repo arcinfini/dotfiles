@@ -16,13 +16,13 @@ vim.opt.linebreak = true
 vim.opt.number = true
 vim.opt.scrolloff = 10
 
-require('config.lazy')
+require('core.lazy')
 require('lazy').setup({
     spec={
-        { import = 'plugins' }, 
+        { import = 'plugins' },
         { import = 'plugins.lsp'}
     }
 })
 
-require('config.mappings')
-require('config.theme')
+require('core.mappings')
+require('core.theme')
