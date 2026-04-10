@@ -1,8 +1,8 @@
-
+vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- Check QuickRef for list of options. The list is not complete however
 
@@ -16,13 +16,13 @@ vim.opt.linebreak = true
 vim.opt.number = true
 vim.opt.scrolloff = 10
 
-require('core.lazy')
-require('lazy').setup({
-    spec={
-        { import = 'plugins' },
-        { import = 'plugins.lsp'}
-    }
+require("core.lazy")
+require("lazy").setup({
+    spec = {
+        { import = "plugins" },
+        { import = "plugins.lsp" },
+    },
 })
 
-require('core.mappings')
-require('core.theme')
+require("core.mappings")
+require("core.theme")

@@ -10,12 +10,12 @@
 --]]
 
 return {
-    'lewis6991/gitsigns.nvim',
+    "lewis6991/gitsigns.nvim",
     init = function()
-        local api = require('gitsigns')
+        local api = require("gitsigns")
         local map = vim.keymap.set
-        
-        map('n', '<leader>gb', api.blame, {})
-        map('n', '<leader>gp', api.preview_hunk, {})
+
+        map("n", "<leader>gb", api.blame, {})
+        map("n", "<leader>gp", api.preview_hunk, {})
     end,
 }

@@ -1,6 +1,13 @@
+--[[
+--
+-- Automatically integrates with the lsp servers to provide completions
+--
+--]]
+
 -- https://cmp.saghen.dev/configuration/reference.html
 return {
-    'saghen/blink.cmp', version = '1.*',
+    "saghen/blink.cmp",
+    version = "1.*",
     opts = {
         sources = {
             default = { "lazydev", "lsp", "path", "snippets", "buffer" },
@@ -15,9 +22,9 @@ return {
         },
         completion = {
             documentation = {
-                auto_show = true
+                auto_show = true,
             },
-            ghost_text = { enabled = true }
+            ghost_text = { enabled = true },
         },
-    }
+    },
 }

@@ -13,15 +13,15 @@ return {
     dependencies = {
         "nvim-tree/nvim-web-devicons",
     },
-    opts={},
+    opts = {},
     init = function()
-        local api = require('nvim-tree.api')
-        local map = vim.keymap.set
+        local api = require("nvim-tree.api")
+        local mappings = require("core.mappings")
+        local set = mappings.set
+        local opts = mappings.opts
 
-        local function opts(desc) end
-
-        map('n', '<leader>tt', api.tree.open, opts('[T]oggle Open / Focus Tree'))
-        map('n', '<leader>tq', api.tree.close, opts('[Q]uit the Tree'))
-        map('n', '<leader>tr', api.tree.reload, opts('[R]eload the Tree'))
-    end
+        set("n", "<leader>tt", api.tree.open, opts("Open / Focus Tree"))
+        set("n", "<leader>tT", api.tree.close, opts("Quit the Tree"))
+        set("n", "<leader>tr", api.tree.reload, opts("Reload the Tree"))
+    end,
 }

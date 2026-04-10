@@ -9,21 +9,27 @@
 --]]
 
 local mason = {
-    "mason-org/mason.nvim", opts = {}
+    "KingMichaelPark/mason.nvim",
+    branch = "feat/add-uv-as-pypi-source",
+    commit = "6ca3f5f",
+    opts = { pip = { use_uv = true } },
 }
 
 local mason_lspconfig = {
-    "mason-org/mason-lspconfig.nvim", 
+    "mason-org/mason-lspconfig.nvim",
     opts = {
         ensure_installed = {
             "lua_ls",
             "rust_analyzer",
-        }
+            "ruff",
+            "ty",
+            "stylua",
+        },
     },
-    dependencies = { "mason-org/mason.nvim" }
+    dependencies = { "KingMichaelPark/mason.nvim" },
 }
 
 return {
     mason,
-    mason_lspconfig
+    mason_lspconfig,
 }
