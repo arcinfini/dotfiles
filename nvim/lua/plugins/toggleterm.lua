@@ -1,10 +1,9 @@
-
 return {
     {
-        'akinsho/toggleterm.nvim',
+        "akinsho/toggleterm.nvim",
         opts = {
-            direction = 'float',
-            open_mapping = [[<c-\>]]
-        }
-    }
+            direction = "float",
+            open_mapping = [[<c-\>]],
+        },
+    },
 }
