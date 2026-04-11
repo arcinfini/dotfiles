@@ -20,8 +20,8 @@ return {
         local set = mappings.set
         local opts = mappings.opts
 
-        set("n", "<leader>tt", api.tree.open, opts("Open / Focus Tree"))
-        set("n", "<leader>tT", api.tree.close, opts("Quit the Tree"))
+        set("n", "<leader>tf", api.tree.open, opts("Focus Tree"))
+        set("n", "<leader>tt", api.tree.toggle, opts("Quit the Tree"))
         set("n", "<leader>tr", api.tree.reload, opts("Reload the Tree"))
     end,
 }

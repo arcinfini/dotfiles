@@ -1,5 +1,14 @@
 local map = vim.keymap.set
 
+local function opts(desc)
+    return {
+        desc = desc,
+        noremap = true,
+        silent = true,
+        nowait = true,
+    }
+end
+
 -- Disable arrow key navigation
 map("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 map("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
@@ -20,14 +29,11 @@ map("n", "<C-Left>", ":tabprevious<CR>", { noremap = true, silent = true })
 map("n", "<leader>/", "gcc", { desc = "Toggle Comment", remap = true })
 map("v", "<leader>/", "gc", { desc = "Toggle Comment", remap = true })
 
-local function opts(desc)
-    return {
-        desc = desc,
-        noremap = true,
-        silent = true,
-        nowait = true,
-    }
-end
+map("n", "<leader>R", function()
+    local session = vim.fn.stdpath("state") .. "/restart_session.vim"
+    vim.cmd("mksession! " .. vim.fn.fnameescape(session))
+    vim.cmd("restart source" .. vim.fn.fnameescape(session))
+end, opts("Restart Neovim"))
 
 return {
     set = map,
