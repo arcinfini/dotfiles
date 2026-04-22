@@ -1,3 +1,5 @@
+vim.g._start_time = vim.uv.hrtime()
+
 vim.opt.termguicolors = true
 vim.g.have_nerd_font = true
 
@@ -21,6 +23,7 @@ require("lazy").setup({
     spec = {
         { import = "plugins" },
         { import = "plugins.lsp" },
+        { import = "plugins.mini" },
     },
 })
 
